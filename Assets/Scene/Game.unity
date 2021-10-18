@@ -907,13 +907,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 417995071}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.028174555, y: 0, z: 0, w: 0.99960303}
   m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -3.229, y: 0, z: 0}
 --- !u!114 &417995077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -928,7 +928,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lookTarget: {fileID: 1178519779}
   offset: {x: 0, y: 3, z: -6}
-  rotation: {x: 15, y: 0, z: 0}
+  rotation: {x: 25, y: 0, z: 0}
 --- !u!1 &466222864
 GameObject:
   m_ObjectHideFlags: 0
@@ -1416,7 +1416,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 169, y: 87}
+  m_AnchoredPosition: {x: 169, y: 84}
   m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &519782477
@@ -5520,7 +5520,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -13, y: 97.5}
+  m_AnchoredPosition: {x: 107, y: 97.5}
   m_SizeDelta: {x: 112.29384, y: 33.091446}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1696024972
@@ -5825,6 +5825,7 @@ MonoBehaviour:
   coinText: {fileID: 1809131040}
   coinCanvas: {fileID: 1658820731}
   OpenButton: {fileID: 519640336}
+  claimButton: {fileID: 1691138816}
   db: {fileID: 11400000, guid: 027f0786b028f4c64a7a01ae859ce43e, type: 2}
 --- !u!1 &1763795880
 GameObject:

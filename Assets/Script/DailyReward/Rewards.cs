@@ -4,6 +4,6 @@ public enum Rewards:int
    
        FirstAm=200,
        SecondAm=400,
-       ThirdAm=500,
+       ThirdAm=0,
     
 }

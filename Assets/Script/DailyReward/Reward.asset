@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1587690a1d3a742bdbaebf16ac83f4a0, type: 3}
   m_Name: Reward
   m_EditorClassIdentifier: 
+  rewards: c80000009001000000000000c8000000

@@ -1,9 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 namespace DailyrewardSystem
 {
+   
     public class DailyReward : MonoBehaviour
     {
         [Header("Main Menu")]
@@ -13,18 +16,15 @@ namespace DailyrewardSystem
 
         [Header("Reward UI")]
         [SerializeField] GameObject coinCanvas;
-        [SerializeField] Button OpenButton;
+        [SerializeField] Button OpenButton, claimButton;
 
 
         [Space]
 
         [Header("Reward Database")]
         [SerializeField] RewardDatabase db;
-        public struct Reward
-        {
-            public RewardType type;
-            public int Amount;
-        }
+        private int nextReward;
+
 
         private void Start()
         {
@@ -32,9 +32,24 @@ namespace DailyrewardSystem
         }
         void Initalize()
         {
+            nextReward = PlayerPrefs.GetInt("Next Reward", 0);
             updateCoinTextUI();
+            OpenButton.onClick.RemoveAllListeners();
             OpenButton.onClick.AddListener(openButton);
+
+            claimButton.onClick.RemoveAllListeners();
+            claimButton.onClick.AddListener(ClaimButton);
         }
+
+        private void ClaimButton()
+        {
+            Rewards reward = db.GetReward(nextReward);
+
+
+            //Choose reward type
+           
+        }
+
         private void updateCoinTextUI()
         {
 
