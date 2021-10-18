@@ -28,21 +28,30 @@ public class PlayerMotor : MonoBehaviour {
 	private float _speedIncreaseTime = 2.5f;
 	private float _speedIncreaseAmount = 0.1f;
 
+    AudioManager play;
+    private void Awake()
+    {
+       
+    }
 
     private void Start()
     {
+       
         _contorller = GetComponent<CharacterController>();
         _anim = GetComponent<Animator>();
 		_speed = _originalSpeed;
+        //  sound = GetComponent<MainSound>();
+        //source = GetComponent<AudioSource>();
+        play = FindObjectOfType<AudioManager>();
     }
 
     private void Update()
     {
 		if (!isRunning)
 			return;
-
-		// speed modifier
-		if ((Time.time - _speedIncreaseLastTick) > _speedIncreaseTime) {
+       
+        // speed modifier
+        if ((Time.time - _speedIncreaseLastTick) > _speedIncreaseTime) {
 			_speedIncreaseLastTick = Time.time;
 			_speed += _speedIncreaseAmount;
 			GameManager.Instance.UpdateModifier (_speed - _originalSpeed);
@@ -161,15 +170,20 @@ public class PlayerMotor : MonoBehaviour {
 		isRunning = false;
         GameManager.Instance.OnDeath();
        // Debug.Log("Dead");
-    
+      
         }
-
+    float time = 1;
+   
 	private void OnControllerColliderHit(ControllerColliderHit hit)
 	{
+       
 		switch (hit.gameObject.tag) {
 		case "Obstacle":
 			_Crash ();
-			break;
+                time -= Time.deltaTime;
+                FindObjectOfType<AudioManager>().Play("game over");
+              
+            break;
 		}
 	}
 }

@@ -27,7 +27,9 @@ public class GameManager : MonoBehaviour {
 	List<string> dtext;
 
 	public InputField field;
-	private void Awake()
+    internal static bool mute;
+
+    private void Awake()
 	{
 		Instance = this;
 		modifierScore = 1;
@@ -83,6 +85,7 @@ public class GameManager : MonoBehaviour {
 
 	public void onPlayButton()
     {
+		FindObjectOfType<AudioManager>().Play("Soundland");
 		UnityEngine.SceneManagement.SceneManager.LoadScene("Game");
     }
 
@@ -149,35 +152,8 @@ public class GameManager : MonoBehaviour {
 
 		Time.timeScale = 1;
 	}
-
-	public void sendMessage()
+	public void Restart()
     {
-
-		/*
-		if (messagetext.Count >= maxMessage)
-		{
-			Destroy(messagetext[0].textObj.gameObject);
-			messagetext.Remove(messagetext[0]);
-		}
-		Message obj = new Message();
-		obj.text = text;
-
-		GameObject newText = Instantiate(textObj, chatPanel.transform);
-		obj.textObj = newText.GetComponent<Text>();
-
-		obj.textObj.text = obj.text;
-		messagetext.Add(obj);
-
-		*/
-		dtext = new List<string>();
-
-	}
-
-}
-[System.Serializable]
-public class Message
-{
-
-	public Text textObj;
-	public string text;
+		UnityEngine.SceneManagement.SceneManager.LoadScene("Game");
+    }
 }

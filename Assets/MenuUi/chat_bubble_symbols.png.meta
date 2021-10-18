@@ -8,6 +8,9 @@ TextureImporter:
   - first:
       213: 443700530820526023
     second: chat_bubble_symbols_1
+  - first:
+      213: 732965181323741766
+    second: chat_bubble_symbols_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -166,6 +169,27 @@ TextureImporter:
       bones: []
       spriteID: 7cfa53e2847582600800000000000000
       internalID: 443700530820526023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chat_bubble_symbols_2
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 0
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64a0881f2f30c2a00800000000000000
+      internalID: 732965181323741766
       vertices: []
       indices: 
       edges: []
