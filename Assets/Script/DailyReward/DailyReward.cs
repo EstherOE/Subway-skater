@@ -16,7 +16,7 @@ namespace DailyrewardSystem
 
         [Header("Reward UI")]
         [SerializeField] GameObject coinCanvas;
-        [SerializeField] Button OpenButton, claimButton;
+        [SerializeField] Button OpenButton,CloseButton, claimButton;
 
 
         [Space]
@@ -34,9 +34,7 @@ namespace DailyrewardSystem
         {
             nextReward = PlayerPrefs.GetInt("Next Reward", 0);
             updateCoinTextUI();
-            OpenButton.onClick.RemoveAllListeners();
-            OpenButton.onClick.AddListener(openButton);
-
+           
             claimButton.onClick.RemoveAllListeners();
             claimButton.onClick.AddListener(ClaimButton);
         }
@@ -59,6 +57,10 @@ namespace DailyrewardSystem
         void openButton()
         {
             coinCanvas.SetActive(true);
+        }
+        void closeButton()
+        {
+            coinCanvas.SetActive(false);
         }
     }
 }

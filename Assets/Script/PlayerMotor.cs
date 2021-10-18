@@ -43,8 +43,13 @@ public class PlayerMotor : MonoBehaviour {
         //  sound = GetComponent<MainSound>();
         //source = GetComponent<AudioSource>();
         play = FindObjectOfType<AudioManager>();
+       // PlayMusic();
     }
 
+    void PlayMusic()
+    {
+        play.Play("Snowland");
+    }
     private void Update()
     {
 		if (!isRunning)
